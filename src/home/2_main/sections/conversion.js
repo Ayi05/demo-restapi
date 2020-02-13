@@ -70,7 +70,7 @@ export default function Conversion() {
         <div className="d-flex justify-content-center">
             <ValidatorForm className={classes.root} autoComplete="on" onSubmit={handleSubmit}>
 
-                <div className="my-4">
+                <div className="form-group row my-4">
                     <SelectValidator
                         select
                         size="small"
@@ -99,7 +99,7 @@ export default function Conversion() {
                     />
                 </div>
 
-                <div className="my-4">
+                <div className="form-group row my-4">
                     <SelectValidator
                         select
                         size="small"
