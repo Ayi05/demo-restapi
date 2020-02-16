@@ -25,14 +25,14 @@ export default function Conversion() {
 
 
     const handleCurrencyIn = event => {
-        let i = event.target.value;
-        setCurrencyIn(currencies[i]);
+        // let i = currenciesName.indexOf(event.target.value);
+        setCurrencyIn(currenciesRates[currenciesName.indexOf(event.target.value)]);
         setAmountOut('');
     };
 
     const handleCurrencyOut = event => {
-        let o = event.target.value;
-        setCurrencyOut(currencies[o]);
+        // let o = currenciesName.indexOf(event.target.value);
+        setCurrencyOut(currenciesRates[currenciesName.indexOf(event.target.value)]);
         setAmountOut('');
     };
 
@@ -44,20 +44,27 @@ export default function Conversion() {
     const handleSubmit = event => {
         if (amountIn >= 0) {
             let amount = (amountIn * (currencyOut / currencyIn));
-            amount = amount.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+            amount = amount.toFixed(3).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
             setAmountOut(amount);
         }
     };
 
-    const [currencies, setCurrencies] = React.useState([]);
 
+    const [currenciesName, setCurrenciesName] = React.useState([]);
     React.useEffect(() => {
-        fetch('https://api.exchangeratesapi.io/latest')
+        fetch('https://api.openrates.io/latest')
             .then(res => res.json())
-            .then(data => setCurrencies(data.rates))
-    });
+            .then(data => setCurrenciesName([data.base, ...Object.keys(data.rates)]))
+    }, []);
 
-    const currenciesName = Object.keys(currencies);
+
+    const [currenciesRates, setCurrenciesRates] = React.useState([]);
+    React.useEffect(() => {
+        fetch('https://api.openrates.io/latest')
+            .then(res => res.json())
+            .then(data => setCurrenciesRates([1, ...Object.values(data.rates)]))
+    }, []);
+
 
     return (
         <div className="d-flex justify-content-center">
