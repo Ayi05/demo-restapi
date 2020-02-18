@@ -1,12 +1,12 @@
 import React from 'react';
-import Topbar from './home/1_header/topbar';
+import Navbar from './home/1_header/navbar';
 import Display from './home/2_main/display';
 
 const Home = (props) => {
   return (
     <div style={{ fontFamily: "Cambria" }}>
-      <Topbar></Topbar>
-      <div className="container">
+      <Navbar></Navbar>
+      <div className="container mt-5">
         <Display></Display>
       </div>
     </div>

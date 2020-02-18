@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import Users from './sections/users'
-import Products from './sections/products'
+// import Products from './sections/products'
 import Conversion from './sections/conversion'
 
 function TabPanel(props) {
@@ -78,8 +78,8 @@ export default function Display() {
                     aria-label="nav tabs example"
                 >
                     <LinkTab label="Conversion" {...a11yProps(0)} />
-                    <LinkTab label="Products" {...a11yProps(1)} />
-                    <LinkTab label="Users" {...a11yProps(2)} />
+                    <LinkTab label="Users" {...a11yProps(1)} />
+                    {/* <LinkTab label="Products" {...a11yProps(2)} /> */}
                 </Tabs>
             </AppBar>
 
@@ -88,12 +88,12 @@ export default function Display() {
             </TabPanel>
 
             <TabPanel value={value} index={1}>
-                <Products></Products>
-            </TabPanel>
-
-            <TabPanel value={value} index={2}>
                 <Users></Users>
             </TabPanel>
+
+            {/* <TabPanel value={value} index={2}>
+                <Products></Products>
+            </TabPanel> */}
 
         </div>
     );
