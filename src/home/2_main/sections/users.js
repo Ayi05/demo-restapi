@@ -15,7 +15,7 @@ const Users = () => {
         <>
             <div className="my-4">
                 <h3 className="text-center text-uppercase text-dark">Données Utilisateurs</h3>
-                <p className="text-center text-muted"><samp>(https://jsonplaceholder.typicode.com/users/)</samp></p>
+                <p className="text-center text-muted d-none d-md-block"><samp>(https://jsonplaceholder.typicode.com/users/)</samp></p>
             </div>
 
             {/* Visible only on xs and sm screen  */}

@@ -69,7 +69,7 @@ export default function Conversion() {
     return (
         <>
             <h3 className="text-center text-uppercase text-dark">Convertisseur de Devises</h3>
-            <p className="text-center text-muted"><samp>(https://api.openrates.io/latest)</samp></p>
+            <p className="text-center text-muted d-none d-md-block"><samp>(https://api.openrates.io/latest)</samp></p>
 
             <div className="d-flex justify-content-center mt-4">
                 <div className="border border-info rounded pb-3">
