@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/demo-restapi/static/css/main.8721ffb2.chunk.css",
-    "main.js": "/demo-restapi/static/js/main.401c5338.chunk.js",
-    "main.js.map": "/demo-restapi/static/js/main.401c5338.chunk.js.map",
+    "main.js": "/demo-restapi/static/js/main.1c317fc3.chunk.js",
+    "main.js.map": "/demo-restapi/static/js/main.1c317fc3.chunk.js.map",
     "runtime-main.js": "/demo-restapi/static/js/runtime-main.bbf3793e.js",
     "runtime-main.js.map": "/demo-restapi/static/js/runtime-main.bbf3793e.js.map",
     "static/js/2.7f737553.chunk.js": "/demo-restapi/static/js/2.7f737553.chunk.js",
     "static/js/2.7f737553.chunk.js.map": "/demo-restapi/static/js/2.7f737553.chunk.js.map",
     "index.html": "/demo-restapi/index.html",
-    "precache-manifest.98c4eaf0ad1791ac1310dd6a37ad4ac5.js": "/demo-restapi/precache-manifest.98c4eaf0ad1791ac1310dd6a37ad4ac5.js",
+    "precache-manifest.5f0a1e825f347f7c2e49eb7563480bbe.js": "/demo-restapi/precache-manifest.5f0a1e825f347f7c2e49eb7563480bbe.js",
     "service-worker.js": "/demo-restapi/service-worker.js",
     "static/css/main.8721ffb2.chunk.css.map": "/demo-restapi/static/css/main.8721ffb2.chunk.css.map",
     "static/js/2.7f737553.chunk.js.LICENSE.txt": "/demo-restapi/static/js/2.7f737553.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bbf3793e.js",
     "static/js/2.7f737553.chunk.js",
     "static/css/main.8721ffb2.chunk.css",
-    "static/js/main.401c5338.chunk.js"
+    "static/js/main.1c317fc3.chunk.js"
   ]
 }
