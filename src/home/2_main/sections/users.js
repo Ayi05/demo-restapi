@@ -12,8 +12,12 @@ const Users = () => {
     });
 
     return (
-
         <>
+            <div className="my-4">
+                <h3 className="text-center text-uppercase text-dark">Données Utilisateurs</h3>
+                <p className="text-center text-muted"><samp>(https://jsonplaceholder.typicode.com/users/)</samp></p>
+            </div>
+
             {/* Visible only on xs and sm screen  */}
             <div className="border d-md-none">
                 <table className="table table-md table-hover">

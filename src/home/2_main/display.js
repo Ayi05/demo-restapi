@@ -78,7 +78,7 @@ export default function Display() {
                     aria-label="nav tabs example"
                 >
                     <LinkTab label="Conversion" {...a11yProps(0)} />
-                    <LinkTab label="Users" {...a11yProps(1)} />
+                    <LinkTab label="Utilisateurs" {...a11yProps(1)} />
                     {/* <LinkTab label="Products" {...a11yProps(2)} /> */}
                 </Tabs>
             </AppBar>

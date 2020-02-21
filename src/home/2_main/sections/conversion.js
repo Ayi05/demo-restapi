@@ -67,73 +67,77 @@ export default function Conversion() {
 
 
     return (
-        <div className="d-flex justify-content-center">
+        <>
+            <h3 className="text-center text-uppercase text-dark">Convertisseur de Devises</h3>
+            <p className="text-center text-muted"><samp>(https://api.openrates.io/latest)</samp></p>
 
-            <div className="border border-info rounded pb-3">
-                <ValidatorForm className={classes.root} autoComplete="on" onSubmit={handleSubmit}>
+            <div className="d-flex justify-content-center mt-4">
+                <div className="border border-info rounded pb-3">
+                    <ValidatorForm className={classes.root} autoComplete="on" onSubmit={handleSubmit}>
 
-                    <div className="form-inline my-3">
-                        <div className="input-group-append">
-                            <SelectValidator
-                                select
-                                size="small"
-                                label="De"
-                                onChange={handleCurrencyIn}
-                                helperText=""
-                                variant="outlined">
+                        <div className="form-inline my-3">
+                            <div className="input-group-append">
+                                <SelectValidator
+                                    select
+                                    size="medium"
+                                    label="De"
+                                    onChange={handleCurrencyIn}
+                                    helperText=""
+                                    variant="outlined">
 
-                                {currenciesName.map(option => (
-                                    <MenuItem key={option} value={option}>
-                                        {option}
-                                    </MenuItem>
-                                ))}
+                                    {currenciesName.map(option => (
+                                        <MenuItem key={option} value={option}>
+                                            {option}
+                                        </MenuItem>
+                                    ))}
 
-                            </SelectValidator>
+                                </SelectValidator>
 
-                            <TextValidator
-                                size="small"
-                                type="number"
-                                label="Montant"
-                                value={amountIn}
-                                onChange={handleAmountIn}
-                                variant="outlined"
-                                validators={['required', 'minNumber:0', 'maxNumber:9999999999999999']} errorMessages={['Champ Obligatoire!']}
-                            />
+                                <TextValidator
+                                    size="medium"
+                                    type="number"
+                                    label="Montant"
+                                    value={amountIn}
+                                    onChange={handleAmountIn}
+                                    variant="outlined"
+                                    validators={['required', 'minNumber:0', 'maxNumber:9999999999999999']} errorMessages={['Champ Obligatoire!']}
+                                />
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="form-inline my-3">
-                        <div className="input-group-append">
-                            <SelectValidator
-                                select
-                                size="small"
-                                label="À"
-                                onChange={handleCurrencyOut}
-                                helperText=""
-                                variant="outlined"
-                            >
-                                {currenciesName.map(option => (
-                                    <MenuItem key={option} value={option}>
-                                        {option}
-                                    </MenuItem>
-                                ))}
-                            </SelectValidator>
+                        <div className="form-inline my-3">
+                            <div className="input-group-append">
+                                <SelectValidator
+                                    select
+                                    size="medium"
+                                    label="À"
+                                    onChange={handleCurrencyOut}
+                                    helperText=""
+                                    variant="outlined"
+                                >
+                                    {currenciesName.map(option => (
+                                        <MenuItem key={option} value={option}>
+                                            {option}
+                                        </MenuItem>
+                                    ))}
+                                </SelectValidator>
 
-                            <TextValidator
-                                size="small"
-                                value={amountOut}
-                                variant="outlined"
-                                helperText=""
-                                InputProps={{ readOnly: true, }}
-                            />
+                                <TextValidator
+                                    size="medium"
+                                    value={amountOut}
+                                    variant="outlined"
+                                    helperText=""
+                                    InputProps={{ readOnly: true, }}
+                                />
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="text-center">
-                        <Button variant="contained" color="primary" type="submit"><i className="fa fa-angle-double-right"></i></Button>
-                    </div>
-                </ValidatorForm>
+                        <div className="text-center">
+                            <Button variant="contained" color="primary" type="submit"><i className="fa fa-angle-double-right"></i></Button>
+                        </div>
+                    </ValidatorForm>
+                </div>
             </div>
-        </div >
+        </>
     );
 }
